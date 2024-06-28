@@ -1,7 +1,7 @@
-import {template} from "../core/layout/template.ts";
+import {layout} from "../core/layout/layout.ts";
 
 export default function home() {
     return `
-    ${template('<h1>Home Page</h1>')}
+    ${layout('<h1>Home Page</h1>')}
     `
 }
