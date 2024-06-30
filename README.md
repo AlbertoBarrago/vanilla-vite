@@ -19,15 +19,17 @@ This is a boilerplate project for building a Single Page Application (SPA) using
 
 Here's a simplified version of the code that handles the client-side routing:
 
-``` typescript
-    document.addEventListener('click', (e: MouseEvent) => {
-        const target = e.target as HTMLAnchorElement;
-        if (target?.tagName === 'A' && target?.href.startsWith(window.location.origin)) {
-            e.preventDefault();
-            const path = target.getAttribute('href');
-            window.history.pushState({}, path, window.location.origin + path);
-            render(path);
-        }
-    });
+```typescript
+document.addEventListener('click', (e: MouseEvent) => {
+  const target = e.target as HTMLAnchorElement
+  if (
+    target?.tagName === 'A' &&
+    target?.href.startsWith(window.location.origin)
+  ) {
+    e.preventDefault()
+    const path = target.getAttribute('href')
+    window.history.pushState({}, path, window.location.origin + path)
+    render(path)
+  }
+})
 ```
-
