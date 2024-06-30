@@ -6,10 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint": "npx eslint 'src/**/*.{js,jsx,ts,tsx}' --ignore-pattern '**/*.{css,svg,d.ts}'",
+    "prettier": "npx prettier . --write"
   },
   "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "eslint": "^9.6.0",
+    "globals": "^15.7.0",
+    "prettier": "3.3.2",
     "typescript": "^5.2.2",
+    "typescript-eslint": "^7.14.1",
     "vite": "^5.3.1"
   }
 }
